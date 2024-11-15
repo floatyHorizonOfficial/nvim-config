@@ -44,4 +44,5 @@ vim.opt.colorcolumn = '95'
 vim.opt.textwidth = 115
 vim.opt.scrolloff = 7
 vim.wo.relativenumber = true
+vim.opt.clipboard = "unnamedplus"
 
