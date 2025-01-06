@@ -23,6 +23,7 @@ require("lazy").setup({
   },
 
   {"ThePrimeagen/vim-be-good", lazy=false},
+  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
 
   { import = "plugins" },
 }, lazy_config)
@@ -40,9 +41,29 @@ end)
 
 -- Custom
 -- Settings
-vim.opt.colorcolumn = '95'
-vim.opt.textwidth = 115
+vim.opt.colorcolumn = '90'
+vim.opt.textwidth = 100
 vim.opt.scrolloff = 7
 vim.wo.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
+
+-- gruvbox
+require("gruvbox").setup({
+  terminal_colors = true, -- add neovim terminal colors
+  undercurl = true,
+  underline = true,
+  bold = true,
+  italic = {
+    strings = true,
+    emphasis = true,
+    comments = true,
+    operators = false,
+    folds = true,
+  },
+  strikethrough = true,
+  dim_inactive = false,
+  transparent_mode = true,
+})
+vim.o.background = "dark"
+vim.cmd("colorscheme gruvbox")
 
